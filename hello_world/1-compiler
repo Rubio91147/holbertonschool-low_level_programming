@@ -1,3 +1,2 @@
 #!/bin/bssh
 gcc -c $CFILE
-

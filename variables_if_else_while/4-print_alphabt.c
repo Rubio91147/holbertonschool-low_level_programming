@@ -12,6 +12,7 @@ char alfabeto = 'a';
 for (alfabeto = 'a'; alfabeto <= 'z'; alfabeto++)
 {
 if (alfabeto != 'e' && alfabeto != 'q')
+{
 putchar(alfabeto);
 }
 }

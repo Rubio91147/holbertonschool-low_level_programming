@@ -9,6 +9,9 @@
 int main(void)
 {
 char alfabeto = 'a';
-for (i = 'a'; i <= 'z'; i++)
+for (alfabeto = 'a'; alfabeto <= 'z'; alfabeto++)
+{
 putchar(alfabeto);
+}
+return (0);
 }

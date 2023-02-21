@@ -8,10 +8,10 @@
 */
 int main(void)
 {
-char numero = '0';
-for (numero = '0'; numero <= '9'; numero++)
+int asccii = 48;
+for (asccii = 48; asccii <= 57; asccii++)
 {
-putchar(numero);
+putchar(asccii);
 }
 putchar('\n');
 return (0);

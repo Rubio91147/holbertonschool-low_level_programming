@@ -11,8 +11,8 @@ int main(void)
 char alfabeto = 'a';
 for (alfabeto = 'a'; alfabeto <= 'z'; alfabeto++)
 {
-  if(lower!= 'e' && lower!='q'){
-        putchar(lower);
+  if(alfabeto != 'e' && alfabeto !='q'){
+        putchar(alfabeto);
     }
 }
 putchar('\n');

@@ -1,11 +1,8 @@
 #include "main.h"
-
 /**
-* print_sign - function
-*@n: number in upper or lower case
-*description: chcks if n numbers  lovercase character
-*
-*Returns 1 o 0 o -1
+* print_sign - a function that prints the sign of a number
+* @n: number input
+* Return: 1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0
 */
 int print_sign(int n)
 {
@@ -21,7 +18,7 @@ return (0);
 }
 else
 {
-_putchar ('-');  
+_putchar ('-');
 return (-1);
 }
 }

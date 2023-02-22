@@ -1,10 +1,11 @@
 #include "main.h"
-/* more headers goes there */
-/* betty style doc for function main goes there */
+
 /**
-*_islower int c- Write a function that checks for lowercase , in lowercase
+*_islower - function
+*@c: character in uppercase or lower case
+*description: checks for lowercase characters
 *
-*Return: Always 0 (success)
+*Return: 1 if true, 0 if false
 */
 int _islower(int c)
 {

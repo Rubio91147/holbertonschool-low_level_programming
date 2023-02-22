@@ -2,7 +2,7 @@
 
 /**
 * print_sign - function
-*@n: character in upper or lower case
+*@n: number in upper or lower case
 *description: chcks if n numbers  lovercase character
 *
 *Returns 1 o 0 o -1
@@ -21,7 +21,7 @@ return (0);
 }
 else
 {
-_putchar ('-1');  
+_putchar ('-');  
 return (-1);
 }
 }

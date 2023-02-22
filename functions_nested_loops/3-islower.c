@@ -2,7 +2,7 @@
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
-*_islower int c- Write a function that checks for lowercase character, in lowercase
+*_islower int c- Write a function that checks for lowercase , in lowercase
 *
 *Return: Always 0 (success)
 */

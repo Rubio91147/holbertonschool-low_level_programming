@@ -7,10 +7,10 @@
 *
 * Return: 1 if true, 0 if false
 */
-int _isalpha(char letter)
+int _isalpha(int c)
 {
-if (letter >= 97 && letter <= 122  || letter >= 65 && letter <= 90)
-return 1;
+if ((c >= 97 && c <= 122)  || (c >= 65 && c <= 90))
+return (1);
 else 
-return 0;	
+return (0);	
 }

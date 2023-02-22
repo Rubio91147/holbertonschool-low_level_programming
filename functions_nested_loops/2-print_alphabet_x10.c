@@ -11,9 +11,11 @@ void print_alphabet_x10(void)
 int nun;
 char alfa;
 for (nun = 1; nun <= 10; nun++)
+{
 for (alfa = 'a'; alfa <= 'z'; alfa++)
 {
 _putchar(alfa);
 }
 _putchar('\n');
+}
 }

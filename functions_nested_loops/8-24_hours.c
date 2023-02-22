@@ -7,13 +7,12 @@
 */
 void jack_bauer(void)
 {
-int n1, n2;
-for (n1 = 0; n1 <= 9; n1++)
+int h, m;
+for (h = 0; h <= 23; h++)
 {
-printf("00:0%d\n", n1);
+for (m = 0; m <= 59; m++)
+{
+printf("%02d:%02d\n", h, m);
 }
-for (n2 = 0; n2 <= 9; n2++)
-{
-printf("23:0%d\n", n2);
 }
 }

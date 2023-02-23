@@ -11,7 +11,7 @@ void times_table(void)
     for(i = 0; i <= 9; i = incremento){
         for(j= 0; j <= 9; j++){
             tab = i * j;
-            printf("%2d",tab);
+            printf("%d",tab);
             if(j != 9)
             printf(", ");
         }

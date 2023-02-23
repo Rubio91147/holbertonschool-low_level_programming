@@ -13,7 +13,7 @@ for (i = 0; i <= 9; i = incremento)
 for (j = 0; j <= 9; j++)
 {
 tab = i * j;
-printf("%d", tab);
+printf("%2d", tab);
 if (j != 9)
 printf(", ");
 }

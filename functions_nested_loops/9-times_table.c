@@ -8,8 +8,10 @@
 void times_table(void)
 {
 int i, j, incremento, tab;
-for (i = 0; i <= 9; i = incremento){
-for (j= 0; j <= 9; j++){
+for (i = 0; i <= 9; i = incremento)
+{
+for (j= 0; j <= 9; j++)
+{
 tab = i * j;
 printf("%2d", tab);
 if (j != 9)

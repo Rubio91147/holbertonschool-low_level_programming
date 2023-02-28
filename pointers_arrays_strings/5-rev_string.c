@@ -11,7 +11,9 @@ void rev_string(char *s)
 		char aux;
 
 		while (s[k++])
+		{
 				len++;
+		}
 
 		for (k = len - 1; k >= len / 2; k--)
 		{

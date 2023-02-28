@@ -11,14 +11,12 @@ void rev_string(char *s)
 		char aux;
 
 		while (s[k++])
-		{
-				len++;
-		}
+		len++;
 
 		for (k = len - 1; k >= len / 2; k--)
 		{
-				aux = s[k];
-				s[k] = s[len - k - 1];
-				s[len - k - 1] = aux;
+		aux = s[k];
+		s[k] = s[len - k - 1];
+		s[len - k - 1] = aux;
 		}
 }

@@ -4,7 +4,6 @@
 * string to uppercase.
 *
 * @str: The string to be changed
-* @cadena: This is the input string
 *
 * Return: Lowercase changed to uppercase of the string
 */

@@ -1,18 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-
-=======
->>>>>>> refs/remotes/origin/master
 /**
 * _atoi - Convert string to an integer.
 * @s: Pointer to a character string.
 *
 * Return: void.
 */
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
 int _atoi(char *s)
 {
 int sign;
@@ -34,9 +27,5 @@ num = num * 10 + (*temp - '0');
 temp++;
 } while (*temp >= '0' && *temp <= '9');
 }
-<<<<<<< HEAD
 return (num * sign);
-=======
-return (num *sign);
->>>>>>> refs/remotes/origin/master
 }

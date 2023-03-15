@@ -9,20 +9,16 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-char *newCadena;
-unsigned int k;
-if (nmemb == 0 && size == 0)
-{
+void *mem;
+char *filler;
+unsigned int index;
+if (nmemb == 0 || size == 0)
 return (NULL);
-}
-newCadena = malloc(nmemb * size);
-if (newCadena == NULL)
-{
+mem = malloc(size * nmemb);
+if (mem == NULL)
 return (NULL);
-}
-for (k = 0; k < nmemb * size; k++)
-{
-newCadena[k] = 0;
-}
-return (newCadena);
+filler = mem;
+for (index = 0; index < (size * nmemb); index++)
+filler[index] = '\0';
+return (mem);
 }

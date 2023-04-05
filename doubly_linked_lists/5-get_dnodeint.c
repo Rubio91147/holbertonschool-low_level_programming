@@ -3,27 +3,23 @@
 #include "lists.h"
 #include <string.h>
 /**
- * free_dlistint2 - frees up a linked list and sets head to NULL
- * @head: head to set to null
+ * get_dnodeint_at_index - deletes the head node of
+ * a linked list and returns the nodes data
+ * @head: pointer to the head of the list
+ * @index: index address of the node.
+ * Return: data of the head of the list.
  */
 
-void free_dlistint2(dlistint_t **head)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-dlistint_t *temp;
-if (head == NULL)
-return;
-if ((*head)->next != NULL)
-temp = (*head)->next;
-else
+unsigned int count;
+if (!head)
+return (NULL);
+for (count = 0; head; count++)
 {
-free(*head);
-*head = NULL;
-return;
+if (count == index)
+return (head);
+head = head->next;
 }
-if (*head)
-{
-free_dlistint2(&temp);
-free(*head);
-}
-*head = NULL;
+return (NULL);
 }

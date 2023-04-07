@@ -3,50 +3,43 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * new_node - creates a LL data node.
- * @n: data to insert into new node.
- * Return: address of new node or NULL if failed.
- */
-static dlistint_t *new_node(int n)
-{
-dlistint_t *node;
-node = malloc(sizeof(dlistint_t));
-if (!node)
-return (NULL);
-node->n = n;
-node->next = NULL;
-return (node);
-}
-/**
- * insert_dnodeint_at_index - inserts a data node at given index into LL
- * @h: pointer to the head of the list
- * @idx: index to insert into
- * @n: data to insert into idx spot in LL
- * Return: address of new node or NULL if failed.
+ * insert_dnodeint_at_index - insert a new node in a given index.
+ * @h: pointer to first node.
+ * @idx: index where will inserted the new node.
+ * @n: data to store in the new node.
+ *
+ * Return: pointer to new node added.
  */
 
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-dlistint_t *temp, *new;
-unsigned int i;
-temp = *h;
-if (!h)
-return (NULL);
-if (!(*h) && idx == 0)
-{
-*h = new_node(n);
-return (*h);
-}
-for (i = 0; temp != NULL; i++)
-{
-if (i + 1 == idx)
-{
-new = new_node(n);
-new->next = temp->next;
-temp->next = new;
-return (new);
-}
-temp = temp->next;
-}
-return (NULL);
+	unsigned int index = 0;
+	dlistint_t *tmp, *new;
+
+	if (!idx || !*h)
+		return (add_dnodeint(h, n));
+	if ((*h)->next == NULL && idx == 1)
+		return (add_dnodeint_end(h, n));
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
+		return (NULL);
+	new->n = n;
+	tmp = *h;
+	for (; tmp != NULL; index++, tmp = tmp->next)
+	{
+		if (index == idx)
+		{
+			new->next = tmp->prev->next;
+			new->prev = tmp->prev;
+			tmp->prev->next = new;
+			tmp->prev = new;
+			return (new);
+		}
+	}
+	if (index == idx)
+	{
+		free(new);
+		return (add_dnodeint_end(h, n));
+	}
+	return (NULL);
 }
